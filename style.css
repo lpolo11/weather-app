@@ -1,0 +1,66 @@
+.container {
+  max-width: 500px;
+  position: center;
+}
+h1 {
+  text-align: center;
+  margin: 10px;
+  padding: 40px;
+  font-size: 35px;
+}
+h3 {
+  text-align: left;
+}
+
+.main-weather {
+  position: relative;
+  float: right;
+  font-size: 15px;
+}
+.time {
+  position: relative;
+  float: right;
+  font-size: 15px;
+}
+
+.dayOfWeek {
+  position: relative;
+  float: right;
+  font-size: 15px;
+}
+
+.main-icon {
+  position: relative;
+  float: left;
+  font-size: 60px;
+}
+.extra-info {
+  position: relative;
+  float: left;
+}
+.sun-update {
+  position: relative;
+  float: right;
+}
+p {
+  text-align: center;
+}
+
+.celsius {
+  font-size: 14px;
+}
+
+.fahren {
+  font-size: 14px;
+}
+#forecast {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+body {
+  margin: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  max-width: 500px;
+}
