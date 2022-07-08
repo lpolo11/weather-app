@@ -64,3 +64,9 @@ body {
   border-radius: 10px;
   max-width: 500px;
 }
+
+.linkToCode {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
