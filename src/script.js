@@ -31,7 +31,16 @@ function displayWeatherCondition(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatData(response.data.dt * 1000);
 }
-let apiKey = "390b40438b4deceb61f738117944f01e";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-text-input");
+  search(cityInput.value);
+}
+function search(city) {
+  let apiKey = "390b40438b4deceb61f738117944f01e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
 
-axios.get(apiUrl).then(displayWeatherCondition);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
