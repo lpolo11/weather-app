@@ -24,7 +24,7 @@ function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#cityName");
   let humidityElement = document.querySelector("#humidity");
-  let dateElement = document.querySelector("#dayOfWeek");
+  let dateElement = document.querySelector("#date");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   humidityElement.innerHTML = response.data.main.humidity;

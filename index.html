@@ -22,25 +22,30 @@
   <body>
     <div class="container">
       <form class="border p-2 mt-5 rounded shadow" id="search-form">
-        <input type="text" placeholder="Search Location" autocomplete="on" id="search-text-input" />
+        <input
+          type="text"
+          placeholder="Search Location"
+          autocomplete="on"
+          id="search-text-input"
+        />
         <input type="submit" />
       </form>
-      <h1>
-        <p class="main-icon">☀️</p> 
-        <span id= "temperature"> </span> 
-        <a class= celsius href="#" id="celsius-toggle">°C/</a><a
-        class = fahren href="#"
-        id="farenheit-toggle"
-        >F</a
-      > 
-      <p id="dayOfWeek">Sunday</p> </br>
-      <p class="time"> Time: 5:05pm </p> </br>
-        <p class="main-weather">H: 45°F L: 20°F</p>
-        <span id="cityName"> Chicago </span>
+      <h1 id="cityName">Chicago</h1>
+      <p id="date">Sunday 05:05pm</p>
+      <p class="main-weather">H: 45°F L: 20°F</p>
+      <p class="main-icon">☀️</p>
+      <span id="temperature"> </span>
+      <a class="celsius" href="#" id="celsius-toggle">°C/</a
+      ><a class="fahren" href="#" id="farenheit-toggle">F</a>
 
-      </h1>
+      <span class="extra-info">
+        <li>Wind Speed: <span id="wind"></span></li>
+        <li>Description:</li>
+        <li>Humidity: <span id="humidity"></span> %</li>
+      </span>
+
       <h3 class="border shadow" id="forecast">5 Day Forecast</h3>
-      <div class="row">
+      <div class="row g-0">
         <div class="col border shadow">
           <p>Tuesday</p>
           <p>⛅</p>
@@ -67,18 +72,19 @@
           <p>H: 80°F L: 60°F</p>
         </div>
       </div>
-     <div class= "row"> <ul class="extra-info">
-         <li> Wind Speed:  <span id="wind"></span> </li>
-         <li> Description: </li>
-       <li> Humidity: <span id="humidity"></span> % </li>
-     </ul>
-      <h4 class=" sun-update">
+
+      <h4 class="sun-update">
         Sunrise: 6:21AM <br />
         Sunset: 7:02am
       </h4>
     </div>
-    </div>
-    <a class="linkToCode" href="https://github.com/lpolo11/weather-app" target="blank"> Open Source Code</a>
+    <a
+      class="linkToCode"
+      href="https://github.com/lpolo11/weather-app"
+      target="blank"
+    >
+      Open Source Code</a
+    >
     <span class="linkToCode">by Lorna Polovina</span>
     <script src="src/script.js"></script>
   </body>

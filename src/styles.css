@@ -1,21 +1,40 @@
 .container {
-  max-width: 500px;
+  max-width: 600px;
   position: center;
 }
 h1 {
-  text-align: center;
-  margin: 10px;
-  padding: 40px;
+  padding: 20px;
   font-size: 35px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+  text-align: center;
 }
-h3 {
-  text-align: left;
+#temperature {
+  position: relative;
+  float: center;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+#date {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
 }
 
 .main-weather {
-  position: relative;
-  float: right;
-  font-size: 15px;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
 }
 .time {
   position: relative;
@@ -35,8 +54,13 @@ h3 {
   font-size: 60px;
 }
 .extra-info {
-  position: relative;
-  float: left;
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
 }
 .sun-update {
   position: relative;
@@ -48,10 +72,12 @@ p {
 
 .celsius {
   font-size: 14px;
+  float: center;
 }
 
 .fahren {
   font-size: 14px;
+  float: center;
 }
 #forecast {
   padding: 5px;
