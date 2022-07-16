@@ -48,11 +48,6 @@ h1 {
   font-size: 15px;
 }
 
-.main-icon {
-  position: relative;
-  float: left;
-  font-size: 60px;
-}
 .extra-info {
   float: right;
   list-style: none;
