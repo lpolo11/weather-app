@@ -19,13 +19,13 @@ function formatData(timestamp) {
     minutes = "0${minutes}";
     return `${day} ${hours}:${minutes}`;
   }
+
   function displayWeatherCondition(response) {
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#cityName");
     let humidityElement = document.querySelector("#humidity");
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#main-icon");
-
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     humidityElement.innerHTML = response.data.main.humidity;
@@ -37,6 +37,7 @@ function formatData(timestamp) {
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     let cityInput = document.querySelector("#search-text-input");
