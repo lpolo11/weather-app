@@ -30,20 +30,21 @@
         />
         <input type="submit" />
       </form>
-      <h1 id="cityName">Chicago</h1>
-      <p id="date">Sunday 05:05pm</p>
-      <p class="main-weather">H: 45°F L: 20°F</p>
-      <img src="" alt="sunny" id="main-icon" class="float-left" />
-      <span id="temperature"> </span>
-      <a class="celsius" href="#" id="celsius-toggle">°C/</a
-      ><a class="fahren" href="#" id="farenheit-toggle">F</a>
+      <div class="weather">
+        <h1 id="cityName">Chicago</h1>
+        <p id="date">Sunday 05:05pm</p>
+        <p class="main-weather">High: 45°F | Low: 20°F</p>
+        <img src="" alt="sunny" id="main-icon" class="float-left" />
+        <span id="temperature"> 15 </span>
+        <a class="celsius" href="#" id="celsius-toggle" class="active">°C </a> |
+        <a class="fahren" href="#" id="farenheit-toggle">F</a>
 
-      <span class="extra-info">
-        <li>Wind Speed: <span id="wind"></span></li>
-        <li>Description:</li>
-        <li>Humidity: <span id="humidity"></span> %</li>
-      </span>
-
+        <span class="extra-info">
+          <li>Wind Speed: <span id="wind"></span></li>
+          <li>Description: <span id="description"></span></li>
+          <li>Humidity: <span id="humidity"></span> %</li>
+        </span>
+      </div>
       <h3 class="border shadow" id="forecast">5 Day Forecast</h3>
       <div class="row g-0">
         <div class="col border shadow">
@@ -72,11 +73,6 @@
           <p>H: 80°F L: 60°F</p>
         </div>
       </div>
-
-      <h4 class="sun-update">
-        Sunrise: 6:21AM <br />
-        Sunset: 7:02am
-      </h4>
     </div>
     <a
       class="linkToCode"

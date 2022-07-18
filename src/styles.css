@@ -52,10 +52,11 @@ h1 {
   float: right;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+  padding-top: 1px;
 }
 .sun-update {
   position: relative;
@@ -90,4 +91,13 @@ body {
   text-align: center;
   margin: auto;
   display: block;
+}
+
+.weather .active {
+  color: black;
+  cursor: default;
+}
+
+.weather .active:hover {
+  text-decoration: none;
 }
