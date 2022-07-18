@@ -47,8 +47,6 @@ function formatData(timestamp) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeatherCondition);
   }
-  let form = document.querySelector("#search-form");
-  form.addEventListener("submit", handleSubmit);
 
   function displayFahrenTemp(event) {
     event.preventDefault;
@@ -68,6 +66,9 @@ function formatData(timestamp) {
   }
 
   let celsiusTemp = null;
+
+  let form = document.querySelector("#search-form");
+  form.addEventListener("submit", handleSubmit);
 
   let fahrenLink = document.querySelector("#fahrenheit-toggle");
   fahrenLink.addEventListener("click", displayFahrenTemp);
