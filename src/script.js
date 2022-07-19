@@ -26,6 +26,7 @@ function formatData(timestamp) {
     let humidityElement = document.querySelector("#humidity");
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#main-icon");
+    celsiusTemp = response.data.main.temp
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     humidityElement.innerHTML = response.data.main.humidity;
@@ -50,7 +51,7 @@ function formatData(timestamp) {
   }
 
   function displayFahrenTemp(event) {
-    event.preventDefault;
+    event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
     celsiusLink.classList.remove("active");
     fahrenLink.classList.add("active");
@@ -59,7 +60,7 @@ function formatData(timestamp) {
   }
 
   function displayCelsiusTemp(event) {
-    event.preventDefault;
+    event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
     celsiusLink.classList.add("active");
     fahrenLink.classList.remove("active");
