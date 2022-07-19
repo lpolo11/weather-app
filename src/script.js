@@ -55,7 +55,7 @@ function formatData(timestamp) {
     let temperatureElement = document.querySelector("#temperature");
     celsiusLink.classList.remove("active");
     fahrenLink.classList.add("active");
-    let fahrenTemp = (celsiusTemp * 9) / 5 + 32;
+    let fahrenTemp = ((celsiusTemp * 9) / 5 + 32);
     temperatureElement.innerHTML = Math.round(fahrenTemp);
   }
 
