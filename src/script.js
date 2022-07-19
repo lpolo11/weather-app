@@ -23,12 +23,14 @@ function formatData(timestamp) {
 
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
+  let descripElement = document.querySelector("#description");
   let cityElement = document.querySelector("#cityName");
   let humidityElement = document.querySelector("#humidity");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#main-icon");
   celsiusTemp = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  descripElement.innerHTML = response.data.weather[0].description;
   cityElement.innerHTML = response.data.name;
   humidityElement.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed);
