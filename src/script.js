@@ -21,6 +21,39 @@ function formatData(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#weekForecast");
+
+  let forecastHTML = `<div class= "row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+   <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+        <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt=""
+        width="42" />
+       <div class="weather-forecast-temp">
+        <span class="max"> 75°F </span> 
+        <span class="min"> 60°F </span>
+      </div>
+</div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "390b40438b4deceb61f738117944f01e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
   let descripElement = document.querySelector("#description");
@@ -40,6 +73,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function handleSubmit(event) {
@@ -80,3 +115,5 @@ fahrenLink.addEventListener("click", displayFahrenTemp);
 
 let celsiusLink = document.querySelector("#celsius-toggle");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+displayForecast();
