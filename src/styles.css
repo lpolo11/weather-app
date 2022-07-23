@@ -1,30 +1,37 @@
-.container {
-  max-width: 600px;
-  position: center;
-}
 h1 {
   padding: 15px;
   font-size: 35px;
-  font-weight: 100;
   line-height: 28px;
   margin-bottom: 0;
   text-align: center;
 }
+
 #temperature {
   position: relative;
   float: center;
   font-size: 50px;
-  font-weight: 100;
+  font-weight: normal;
 }
-
+#main-icon {
+  margin-bottom: 30px;
+}
 #date {
   text-align: center;
   list-style: none;
   margin: 3;
   padding: 0;
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 18px;
   line-height: 10px;
+}
+.container {
+  max-width: 600px;
+  opacity: 0.9;
+  background-color: #e4e6f2;
+  margin-top: 100px;
+  margin: 30px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-top: 30px;
 }
 
 .main-weather {
@@ -54,9 +61,9 @@ h1 {
   margin: 0;
   padding: 20px;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: normal;
   line-height: 19px;
-  padding-top: 1px;
+  color: black;
 }
 .sun-update {
   position: relative;
@@ -67,13 +74,15 @@ p {
 }
 
 .celsius {
-  font-size: 14px;
+  font-size: 17px;
   float: center;
+  text-decoration: none;
 }
 
 .fahren {
-  font-size: 14px;
+  font-size: 17px;
   float: center;
+  text-decoration: none;
 }
 #forecast {
   padding: 5px;
@@ -81,28 +90,28 @@ p {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin: 20px auto;
   text-align: center;
   color: black;
 }
 
 .weather-forecast-date {
-  font-size: 16px;
-  opacity: 0.5;
+  font-size: 20px;
 }
 
 .weather-forecast-temp {
-  font-size: 13px;
+  font-size: 18px;
 }
-
-body {
-  margin: 30px;
-  border: 1px solid black;
-  border-radius: 10px;
-  max-width: 500px;
+.max {
+  font-weight: bolder;
 }
-
 .linkToCode {
+  text-align: center;
+  margin: auto;
+  display: block;
+  color: white;
+}
+.myName {
   text-align: center;
   margin: auto;
   display: block;

@@ -20,34 +20,53 @@
   </head>
 
   <body>
+    <style type="text/css">
+      body {
+        background-color: rgb(0, 0, 0);
+        background-image: url(http://www.zingerbugimages.com/backgrounds/blue_sky_with_sun_and_clouds.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
     <div class="container">
-      <form class="border p-2 mt-5 rounded shadow" id="search-form">
-        <input
-          type="text"
-          placeholder="Search Location"
-          autocomplete="on"
-          id="search-text-input"
-        />
-        <input type="submit" />
-      </form>
-      <div class="weather">
-        <h1 id="cityName">Chicago</h1>
-        <p id="date">Sunday 05:05pm</p>
+      <div class="weather-app-body">
+        <form class="border p-2 rounded shadow" id="search-form">
+          <input
+            type="text"
+            placeholder="Search Location"
+            autocomplete="on"
+            id="search-text-input"
+          />
+          <input type="submit" />
+        </form>
+        <div class="weather">
+          <h1 id="cityName">Chicago</h1>
+          <p id="date">Sunday 05:05pm</p>
 
-        <img src="" alt="sunny" id="main-icon" class="float-left" />
-        <span id="temperature"> 15 </span>
-        <a class="celsius" href="#" id="celsius-toggle" class="active">°C </a> |
-        <a class="fahren" href="#" id="fahrenheit-toggle">F</a>
+          <img
+            src="http://openweathermap.org/img/wn/01d@2x.png"
+            alt="sunny"
+            id="main-icon"
+            class="float-left"
+          />
+          <span id="temperature"> 15 </span>
+          <a class="celsius" href="#" id="celsius-toggle" class="active">°C </a>
+          |
+          <a class="fahren" href="#" id="fahrenheit-toggle">F</a>
 
-        <span class="extra-info">
-          <li>Wind Speed: <span id="wind"></span> km/h</li>
-          <li>Description: <span id="description"></span></li>
-          <li>Humidity: <span id="humidity"></span> %</li>
-        </span>
+          <span class="extra-info">
+             <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Description: <span id="description"></span></li>
+            <li>Wind Speed: <span id="wind"></span> km/h</li>
+           
+           
+          </span>
+        </div>
+        <h3 class="border shadow" id="forecast">6 Day Forecast</h3>
       </div>
-      <h3 class="border shadow" id="forecast">5 Day Forecast</h3>
+      <div class="weather-forecast" id="weekForecast"></div>
     </div>
-    <div class="weather-forecast" id="weekForecast"></div>
     <a
       class="linkToCode"
       href="https://github.com/lpolo11/weather-app"
@@ -55,7 +74,7 @@
     >
       Open Source Code</a
     >
-    <span class="linkToCode">by Lorna Polovina</span>
+    <span class="myName">by Lorna Polovina</span>
     <script src="src/script.js"></script>
   </body>
 </html>
