@@ -77,13 +77,12 @@ p {
   font-size: 17px;
   float: center;
   text-decoration: none;
+  color: black;
+}
+.celsius:hover {
+  color: black;
 }
 
-.fahren {
-  font-size: 17px;
-  float: center;
-  text-decoration: none;
-}
 #forecast {
   padding: 5px;
   border-radius: 5px;
@@ -115,13 +114,4 @@ p {
   text-align: center;
   margin: auto;
   display: block;
-}
-
-.weather .active {
-  color: black;
-  cursor: default;
-}
-
-.weather .active:hover {
-  text-decoration: none;
 }

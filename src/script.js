@@ -72,7 +72,6 @@ function displayWeatherCondition(response) {
   let humidityElement = document.querySelector("#humidity");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#main-icon");
-  celsiusTemp = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   descripElement.innerHTML = response.data.weather[0].description;
   cityElement.innerHTML = response.data.name;
@@ -99,32 +98,8 @@ function search(city) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function displayFahrenTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenLink.classList.add("active");
-  let fahrenTemp = (celsiusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenTemp);
-}
-
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.add("active");
-  fahrenLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenLink = document.querySelector("#fahrenheit-toggle");
-fahrenLink.addEventListener("click", displayFahrenTemp);
-
-let celsiusLink = document.querySelector("#celsius-toggle");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
 search("London");
 displayForecast();
